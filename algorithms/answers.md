@@ -3,7 +3,7 @@
 *   b) O(log n)
 *   c) O(log n)
 *   d) O(n log n)
-*   e) O(n!)
+*   e) O(n^3)
 *   f) O(n)
 *   g) O(n)
 
