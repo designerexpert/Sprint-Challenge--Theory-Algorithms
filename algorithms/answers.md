@@ -70,3 +70,9 @@ const whereEggBreaks = (f) => {
 
 console.log(whereEggBreaks(100));
 ```
+# Exercise III
+*   a) O(n^2) ranging until O(n log n);
+    solution a iterates over the array making a sorted copy behind it.
+    Depends on how well sorted are the items initially but worse case is O(n^2)
+*   b) O(n log n)
+    solution takes into consideration the best case scenario of divide and conquer.
