@@ -6,12 +6,12 @@ Find regexes that match the following. (e.g. find a single regex that matches
 both `antelope` and `antelopes`.)
 
 * Single regex that matches either of these:
-  * /.*pes?/g
+  * ```/.*pes?/g```
     antelope rocks out
     antelopes rock out
 
 * Regex that matches either of:
-  * /[mg].*t/g
+  * ```/[mg].*t/g```
     goat
     moat
 
@@ -22,7 +22,7 @@ both `antelope` and `antelopes`.)
 * Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   month and day can each be 1-2 digits). This does not need to verify the date
   is correct (e.g 33333-33-33 can match).
-  * /\d{1,4}-\d{1,2}-\d{1,2}/g
+  * ```/\d{1,4}-\d{1,2}-\d{1,2}/g```
 
   2000-10-12
   1999-1-20
@@ -35,7 +35,7 @@ both `antelope` and `antelopes`.)
 > Designer](http://madebyevan.com/fsm/).
 
 * Draw a state machine that corresponds to the following regex:
-
+  * [look at file:](abcdef_StateMachine.jpg)
       ab*c+d?[ef]
 
   Remember the ε transition can be used to move between states without
@@ -44,16 +44,19 @@ both `antelope` and `antelopes`.)
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
   cause state transitions.
+  * [look at file:](lion.png)
+    lion state machine
 
 * The VT-100 terminal (console) outputs text to the screen as it
   receives it over the wire. One exception is that when it receives an
   ESC character (ASCII 27), it goes into a special mode where it looks
   for commands to change its behavior. For example:
+  * ```/\e\[(\d+;\d+f)/g```
 
       ESC[12;45f
 
   moves the cursor to line 12, column 45.
-
+  * ```/\e\[(\dm)/g```
       ESC[1m
 
   changes the font to bold.
@@ -65,6 +68,8 @@ both `antelope` and `antelopes`.)
 
   * Draw a state machine diagram for a VT-100 that can consume regular
     character sequences as well as the two above ESC sequences.
+    * [look at file:](VT-100_StateMachine.jpg)
+      VT-100 STATE MACHINE
 
 > If you're curious, [here are all the VT-100 escape
 > sequences](http://ascii-table.com/ansi-escape-sequences-vt-100.php).
